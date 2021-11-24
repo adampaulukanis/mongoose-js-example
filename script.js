@@ -15,27 +15,8 @@ mongoose.connect(
 
 async function run() {
   try {
-    // const user = new User({ name: 'Adam', age: 35 });
-    const user = await User.create({
-      name: 'Adam',
-      age: 2021 - 1985,
-      hobbies: ['Travelling', 'Sport'],
-      address: {
-        street: 'Main st.',
-      },
-      email: 'ADAM@x.filez',
-    });
-    user.name = 'Sadam';
-    await user.save();
-
-    user.age = 20;
-    user.hobbies.push('kaszanka');
-    user.email = 'sadam@world.pl';
-    user.createdAt = 5;
-    await user.save();
-
-    console.log(await User.find({ name: 'Sadam' }));
-    //console.log(await User.find({ name: 'Adam' }));
+    const user = await User.findById('619e6bfe6ba12e331c3a7db7');
+    console.log(user);
   } catch (err) {
     console.log(err.message);
   }
