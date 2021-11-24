@@ -15,7 +15,7 @@ mongoose.connect(
 
 async function run() {
   try {
-    const user = await User.findById('619e6bfe6ba12e331c3a7db7');
+    const user = await User.find({ name: 'Sa' });
     console.log(user);
   } catch (err) {
     console.log(err.message);
