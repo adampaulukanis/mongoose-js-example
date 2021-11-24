@@ -15,7 +15,7 @@ mongoose.connect(
 
 async function run() {
   try {
-    const user = await User.find({ name: 'Sa' });
+    const user = await User.deleteOne({ name: 'Sadam' });
     console.log(user);
   } catch (err) {
     console.log(err.message);
